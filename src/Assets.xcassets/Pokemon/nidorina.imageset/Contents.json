@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "nidorina.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

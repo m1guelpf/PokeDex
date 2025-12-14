@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ditto.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
