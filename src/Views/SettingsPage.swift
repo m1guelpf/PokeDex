@@ -29,7 +29,7 @@ struct SettingsPage: View {
 		}
 		.fileImporter(isPresented: $isBrowsingFiles, allowedContentTypes: [.commaSeparatedText]) { result in
 			do { try onFileSelected(result.get()) }
-			catch { Logger.app.error("File import error: \(error)", error: error) }
+			catch { Logger.app.error("File import error: \(error)") }
 		}
 		.navigationTitle("Settings")
 	}

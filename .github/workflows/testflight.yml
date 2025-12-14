@@ -41,7 +41,6 @@ jobs:
       - name: Build and Deploy
         run: bundle exec fastlane deploy
         env:
-          SENTRY_TOKEN: ${{ secrets.SENTRY_TOKEN }}
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
           APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
           APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}

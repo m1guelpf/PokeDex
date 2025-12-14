@@ -7,16 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C05E5EA72ECFAB0A00E37F51 /* Atlantis in Frameworks */ = {isa = PBXBuildFile; productRef = C05E5EA62ECFAB0A00E37F51 /* Atlantis */; };
 		C05E5EAB2ECFABC100E37F51 /* SQLiteData in Frameworks */ = {isa = PBXBuildFile; productRef = C05E5EAA2ECFABC100E37F51 /* SQLiteData */; };
-		C07693C02ED1544300280E0C /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = C07693BF2ED1544300280E0C /* Nuke */; };
-		C07693C22ED1544800280E0C /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = C07693C12ED1544800280E0C /* NukeUI */; };
-		C0863E762ECFACFB004517E3 /* Pulse in Frameworks */ = {isa = PBXBuildFile; productRef = C0863E752ECFACFB004517E3 /* Pulse */; };
-		C0863E782ECFACFB004517E3 /* PulseUI in Frameworks */ = {isa = PBXBuildFile; productRef = C0863E772ECFACFB004517E3 /* PulseUI */; };
 		C0AD6D202EEE0312009D2482 /* SwiftCSV in Frameworks */ = {isa = PBXBuildFile; productRef = C0AD6D1F2EEE0312009D2482 /* SwiftCSV */; };
 		C0F3EF5F2ECFB6A5005CA536 /* TinyStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C0F3EF5E2ECFB6A5005CA536 /* TinyStorage */; };
-		C0F3EF612ECFB6C8005CA536 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = C0F3EF602ECFB6C8005CA536 /* Sentry */; };
-		C0F3EF632ECFB70F005CA536 /* PulseProxy in Frameworks */ = {isa = PBXBuildFile; productRef = C0F3EF622ECFB70F005CA536 /* PulseProxy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,16 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0863E762ECFACFB004517E3 /* Pulse in Frameworks */,
 				C05E5EAB2ECFABC100E37F51 /* SQLiteData in Frameworks */,
-				C07693C22ED1544800280E0C /* NukeUI in Frameworks */,
-				C07693C02ED1544300280E0C /* Nuke in Frameworks */,
 				C0F3EF5F2ECFB6A5005CA536 /* TinyStorage in Frameworks */,
 				C0AD6D202EEE0312009D2482 /* SwiftCSV in Frameworks */,
-				C0863E782ECFACFB004517E3 /* PulseUI in Frameworks */,
-				C05E5EA72ECFAB0A00E37F51 /* Atlantis in Frameworks */,
-				C0F3EF632ECFB70F005CA536 /* PulseProxy in Frameworks */,
-				C0F3EF612ECFB6C8005CA536 /* Sentry in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,15 +95,8 @@
 			);
 			name = PokeDex;
 			packageProductDependencies = (
-				C05E5EA62ECFAB0A00E37F51 /* Atlantis */,
 				C05E5EAA2ECFABC100E37F51 /* SQLiteData */,
-				C0863E752ECFACFB004517E3 /* Pulse */,
-				C0863E772ECFACFB004517E3 /* PulseUI */,
 				C0F3EF5E2ECFB6A5005CA536 /* TinyStorage */,
-				C0F3EF602ECFB6C8005CA536 /* Sentry */,
-				C0F3EF622ECFB70F005CA536 /* PulseProxy */,
-				C07693BF2ED1544300280E0C /* Nuke */,
-				C07693C12ED1544800280E0C /* NukeUI */,
 				C0AD6D1F2EEE0312009D2482 /* SwiftCSV */,
 			);
 			productName = Cheevos;
@@ -132,7 +111,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2610;
-				LastUpgradeCheck = 2610;
+				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					C0F9FC9A2ECFA845009DB8F2 = {
 						CreatedOnToolsVersion = 26.1.1;
@@ -149,12 +128,8 @@
 			mainGroup = C0F9FC922ECFA845009DB8F2;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				C05E5EA52ECFAB0A00E37F51 /* XCRemoteSwiftPackageReference "atlantis" */,
 				C05E5EA92ECFABC100E37F51 /* XCRemoteSwiftPackageReference "sqlite-data" */,
-				C0F1A6852ECFAC4100A99B8A /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
-				C082E6B02ECFACD30041010F /* XCRemoteSwiftPackageReference "Pulse" */,
 				C0B7F0482ECFAEA00016A08A /* XCRemoteSwiftPackageReference "TinyStorage" */,
-				C07693BE2ED1541A00280E0C /* XCRemoteSwiftPackageReference "Nuke" */,
 				C02565E02EEE02EE00F91FC0 /* XCRemoteSwiftPackageReference "SwiftCSV" */,
 			);
 			preferredProjectObjectVersion = 77;
@@ -247,6 +222,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -304,6 +280,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -316,9 +293,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = src/PokeDex.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LR4RJT6586;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = LR4RJT6586;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = src/Info.plist;
@@ -337,6 +316,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = build.miguel.PokeDex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match Development build.miguel.PokeDex";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -358,9 +338,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = src/PokeDex.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LR4RJT6586;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = LR4RJT6586;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = src/Info.plist;
@@ -379,6 +361,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = build.miguel.PokeDex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match AppStore build.miguel.PokeDex";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -425,36 +408,12 @@
 				minimumVersion = 0.10.0;
 			};
 		};
-		C05E5EA52ECFAB0A00E37F51 /* XCRemoteSwiftPackageReference "atlantis" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ProxymanApp/atlantis";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.31.0;
-			};
-		};
 		C05E5EA92ECFABC100E37F51 /* XCRemoteSwiftPackageReference "sqlite-data" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/sqlite-data.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.3.0;
-			};
-		};
-		C07693BE2ED1541A00280E0C /* XCRemoteSwiftPackageReference "Nuke" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kean/Nuke";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 12.8.0;
-			};
-		};
-		C082E6B02ECFACD30041010F /* XCRemoteSwiftPackageReference "Pulse" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kean/Pulse";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.1.4;
 			};
 		};
 		C0B7F0482ECFAEA00016A08A /* XCRemoteSwiftPackageReference "TinyStorage" */ = {
@@ -465,46 +424,13 @@
 				minimumVersion = 2.0.1;
 			};
 		};
-		C0F1A6852ECFAC4100A99B8A /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/getsentry/sentry-cocoa.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.57.3;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C05E5EA62ECFAB0A00E37F51 /* Atlantis */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C05E5EA52ECFAB0A00E37F51 /* XCRemoteSwiftPackageReference "atlantis" */;
-			productName = Atlantis;
-		};
 		C05E5EAA2ECFABC100E37F51 /* SQLiteData */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C05E5EA92ECFABC100E37F51 /* XCRemoteSwiftPackageReference "sqlite-data" */;
 			productName = SQLiteData;
-		};
-		C07693BF2ED1544300280E0C /* Nuke */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C07693BE2ED1541A00280E0C /* XCRemoteSwiftPackageReference "Nuke" */;
-			productName = Nuke;
-		};
-		C07693C12ED1544800280E0C /* NukeUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C07693BE2ED1541A00280E0C /* XCRemoteSwiftPackageReference "Nuke" */;
-			productName = NukeUI;
-		};
-		C0863E752ECFACFB004517E3 /* Pulse */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C082E6B02ECFACD30041010F /* XCRemoteSwiftPackageReference "Pulse" */;
-			productName = Pulse;
-		};
-		C0863E772ECFACFB004517E3 /* PulseUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C082E6B02ECFACD30041010F /* XCRemoteSwiftPackageReference "Pulse" */;
-			productName = PulseUI;
 		};
 		C0AD6D1F2EEE0312009D2482 /* SwiftCSV */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -515,16 +441,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C0B7F0482ECFAEA00016A08A /* XCRemoteSwiftPackageReference "TinyStorage" */;
 			productName = TinyStorage;
-		};
-		C0F3EF602ECFB6C8005CA536 /* Sentry */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C0F1A6852ECFAC4100A99B8A /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
-			productName = Sentry;
-		};
-		C0F3EF622ECFB70F005CA536 /* PulseProxy */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C082E6B02ECFACD30041010F /* XCRemoteSwiftPackageReference "Pulse" */;
-			productName = PulseProxy;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

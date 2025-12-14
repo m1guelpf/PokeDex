@@ -1,5 +1,4 @@
 import OSLog
-import Sentry
 import Foundation
 import IssueReporting
 
@@ -14,7 +13,7 @@ struct Logger: Sendable {
 		logger = os.Logger(subsystem: Bundle.main.bundleIdentifier!, category: category)
 	}
 
-	private func log(_ message: String, level: SentryLevel, error: (any Error)? = nil) {
+	private func log(_ message: String, level: Level) {
 		if ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] == "1" {
 			print("\(level.emoji) [\(category)] \(message)")
 		}
@@ -22,36 +21,16 @@ struct Logger: Sendable {
 		switch level {
 			case .debug:
 				logger.debug("\(message)")
-				#if !DEBUG
-				SentrySDK.logger.debug(message)
-				#endif
 			case .info:
 				logger.info("\(message)")
-				#if !DEBUG
-				SentrySDK.logger.info(message)
-				#endif
 			case .warning:
 				logger.warning("\(message)")
-				#if !DEBUG
-				SentrySDK.logger.warn(message)
-				#endif
 			case .error:
 				logger.error("\(message)")
-				#if !DEBUG
-				SentrySDK.logger.error(message)
-				if let error { SentrySDK.capture(error: error) }
-				#endif
 			case .fatal:
 				logger.fault("\(message)")
-				#if !DEBUG
-				SentrySDK.logger.fatal(message)
-				if let error { SentrySDK.capture(error: error) }
-				#endif
 			default:
 				logger.info("\(message)")
-				#if !DEBUG
-				SentrySDK.logger.info(message)
-				#endif
 		}
 	}
 
@@ -67,8 +46,8 @@ struct Logger: Sendable {
 		log(message, level: .warning)
 	}
 
-	func error(_ message: String, error: (any Error)? = nil) {
-		log(message, level: .error, error: error)
+	func error(_ message: String) {
+		log(message, level: .error)
 	}
 
 	func fault(_ message: String) {
@@ -76,15 +55,17 @@ struct Logger: Sendable {
 	}
 }
 
-extension SentryLevel {
+enum Level {
+	case trace, debug, info, warning, error, fatal
+
 	var emoji: String {
 		switch self {
+			case .info: "ℹ️"
 			case .debug: "🐛"
 			case .error: "❗️"
 			case .fatal: "💀"
+			case .trace: "🔍"
 			case .warning: "⚠️"
-			case .none, .info: "ℹ️"
-			@unknown default: "ℹ️"
 		}
 	}
 }
@@ -95,6 +76,6 @@ struct OSLogIssueReporter: IssueReporter {
 	}
 
 	func reportIssue(_ error: any Error, _ message: @autoclosure () -> String?, fileID _: StaticString, filePath: StaticString, line: UInt, column _: UInt) {
-		Logger.app.error(message() ?? "Unexpected developer error  in \(filePath):\(line)", error: error)
+		Logger.app.error(message() ?? "Unexpected developer error in \(filePath):\(line) \(error)")
 	}
 }

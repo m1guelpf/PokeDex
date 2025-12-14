@@ -24,7 +24,6 @@ lane :deploy do
 	)
 
 	build_app(scheme: "PokeDex", xcargs: "-skipMacroValidation")
-	sentry_debug_files_upload(auth_token: ENV["SENTRY_TOKEN"], org_slug: 'm1guelpf', project_slug: 'pokedex', derived_data: true, include_sources: true)
 	# upload_to_testflight(distribute_external: true, changelog: "", groups: ["External"])
 	upload_to_testflight(skip_submission: true)
 end
