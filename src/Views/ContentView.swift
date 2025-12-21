@@ -54,6 +54,7 @@ struct ContentView: View {
 		}
 		.animation(.default, value: filteredPokemon)
 		.searchable(text: $query)
+		.searchPresentationToolbarBehavior(.avoidHidingContent)
 		.navigationTitle("Pokémon")
 		.navigationSubtitle(subtitle)
 		.toolbarTitleDisplayMode(.inlineLarge)
