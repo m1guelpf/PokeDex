@@ -6,13 +6,18 @@ struct RootContainer: View {
 	@FetchAll(Game.all) private var games: [Game] = []
 	@TinyStorageItem(.activeGameId) private var currentGameID: UUID? = nil
 
+	var currentGame: Game? {
+		guard let currentGameID else { return nil }
+		return games.first(where: { $0.id == currentGameID })
+	}
+
 	var body: some View {
 		Group {
 			if games.isEmpty {
 				SplashScreen()
 			} else {
-				if let currentGameID = Binding($currentGameID) {
-					GameScreen(currentGameID: currentGameID)
+				if let currentGame {
+					GameScreen(currentGame: currentGame)
 				} else {
 					ProgressView()
 				}

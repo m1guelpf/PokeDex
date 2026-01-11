@@ -3,12 +3,13 @@ import SQLiteData
 import TinyStorage
 
 struct GameScreen: View {
-	@Binding var currentGameID: UUID
+	var currentGame: Game
 
 	@State private var query: String = ""
 	@State private var isAddingGame = false
 	@State private var isPresentingSettings = false
 
+	@TinyStorageItem(.activeGameId) private var currentGameID: UUID? = nil
 	@TinyStorageItem(.showingPercentage) private var isShowingPercentage = false
 	@TinyStorageItem(.showingOnlyMissing) private var showingOnlyMissing = false
 
@@ -16,13 +17,9 @@ struct GameScreen: View {
 	@FetchAll(Game.all, animation: .default) private var games: [Game]
 	@FetchAll(Pokemon.none, animation: .default) private var pokemon: [Pokemon]
 
-	init(currentGameID: Binding<UUID>) {
-		_currentGameID = currentGameID
-		_pokemon = FetchAll(Pokemon.where { $0.gameId == currentGameID.wrappedValue }.order(by: \.dexNumber), animation: .default)
-	}
-
-	var currentGame: Game {
-		games.first { $0.id == currentGameID }!
+	init(currentGame: Game) {
+		self.currentGame = currentGame
+		_pokemon = FetchAll(Pokemon.where { $0.gameId == currentGame.id }.order(by: \.dexNumber), animation: .default)
 	}
 
 	var totalCatchablePokemon: Int {
@@ -153,6 +150,6 @@ struct GameScreen: View {
 	}
 
 	NavigationStack {
-		GameScreen(currentGameID: .constant(Game.sampleData.id))
+		GameScreen(currentGame: .sampleData)
 	}
 }
