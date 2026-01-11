@@ -26,6 +26,7 @@ func appDatabase() throws -> any DatabaseWriter {
 	#endif
 
 	migrator.registerMigrations([
+		CreateGamesTable.self,
 		CreatePokemonTable.self,
 	])
 

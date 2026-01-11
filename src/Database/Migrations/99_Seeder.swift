@@ -5,14 +5,17 @@ import SQLiteData
 final class SeedDatabase: Seeder {
 	static func seed() -> Records {
 		apply([
+			seedGame,
 			seedPokemon,
 		])
 	}
 
+	static func seedGame() -> [Game] {
+		[Game.sampleData]
+	}
+
 	static func seedPokemon() -> [Pokemon] {
-		[
-			Pokemon.sampleData,
-		]
+		[Pokemon.sampleData]
 	}
 }
 #endif

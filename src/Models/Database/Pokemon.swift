@@ -5,9 +5,10 @@ import SQLiteData
 @Table("pokemon")
 struct Pokemon: Identifiable, Equatable, Hashable, Sendable {
 	var id: UUID
+	var gameId: UUID
 	var name: String
-	var dexNumber: Int
 	var notes: String
+	var dexNumber: Int
 	var isRegistered: Bool = false
 
 	var imageName: String {
@@ -19,23 +20,18 @@ struct Pokemon: Identifiable, Equatable, Hashable, Sendable {
 			.trimmingCharacters(in: .whitespacesAndNewlines)
 	}
 
-	func update(set updates: (inout Updates<Pokemon>) -> Void) {
-		@Dependency(\.defaultDatabase) var database
-
-		withErrorReporting {
-			try database.write { db in
-				try Pokemon.find(id).update(set: updates).execute(db)
-			}
-		}
+	func spriteFilePath(for game: Game) -> URL {
+		URL.documentsDirectory.appending(path: "sprites").appending(path: game.slug).appending(path: "\(imageName).png", directoryHint: .notDirectory)
 	}
 }
 
 extension Pokemon {
 	static let sampleData = Pokemon(
 		id: UUID(),
+		gameId: Game.sampleData.id,
 		name: "Larvitar",
-		dexNumber: 246,
 		notes: "Found in Sevault Canyon.",
+		dexNumber: 246,
 		isRegistered: false
 	)
 }

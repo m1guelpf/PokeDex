@@ -2,14 +2,28 @@ import SwiftUI
 import SQLiteData
 import TinyStorage
 
-struct ContentView: View {
-	@State private var query: String = ""
-	@State private var isPresentingSettings = false
+struct GameScreen: View {
+	@Binding var currentGameID: UUID
 
-	@FetchAll(Pokemon.order(by: \.dexNumber), animation: .default) var pokemon
+	@State private var query: String = ""
+	@State private var isAddingGame = false
+	@State private var isPresentingSettings = false
 
 	@TinyStorageItem(.showingPercentage) private var isShowingPercentage = false
 	@TinyStorageItem(.showingOnlyMissing) private var showingOnlyMissing = false
+
+	@Dependency(\.defaultDatabase) private var database
+	@FetchAll(Game.all, animation: .default) private var games: [Game]
+	@FetchAll(Pokemon.none, animation: .default) private var pokemon: [Pokemon]
+
+	init(currentGameID: Binding<UUID>) {
+		_currentGameID = currentGameID
+		_pokemon = FetchAll(Pokemon.where { $0.gameId == currentGameID.wrappedValue }.order(by: \.dexNumber), animation: .default)
+	}
+
+	var currentGame: Game {
+		games.first { $0.id == currentGameID }!
+	}
 
 	var subtitle: String {
 		if isShowingPercentage {
@@ -31,7 +45,7 @@ struct ContentView: View {
 	var body: some View {
 		List(filteredPokemon) { pokemon in
 			HStack {
-				Image(pokemon.imageName)
+				SpriteManager.shared.get(for: pokemon, in: currentGame)
 					.resizable()
 					.scaledToFit()
 					.frame(width: 50)
@@ -55,7 +69,7 @@ struct ContentView: View {
 		.animation(.default, value: filteredPokemon)
 		.searchable(text: $query)
 		.searchPresentationToolbarBehavior(.avoidHidingContent)
-		.navigationTitle("Pokémon")
+		.navigationTitle(currentGame.name)
 		.navigationSubtitle(subtitle)
 		.toolbarTitleDisplayMode(.inlineLarge)
 		.sheet(isPresented: $isPresentingSettings) {
@@ -64,22 +78,41 @@ struct ContentView: View {
 		.onShake {
 			isPresentingSettings = true
 		}
+		.toolbarTitleMenu {
+			Picker("Select Game", selection: $currentGameID) {
+				ForEach(games) { game in
+					Text(game.name)
+						.tag(game.id)
+				}
+			}
+
+			Button("Add Game", systemImage: "plus") {
+				isAddingGame = true
+			}
+		}
 		.toolbar {
 			ToolbarItem(placement: .largeSubtitle) {
-				Text(subtitle)
-					.font(.caption)
-					.foregroundStyle(.secondary)
-					.contentTransition(.numericText())
-					.onTapGesture {
-						withAnimation { isShowingPercentage.toggle() }
-					}
+				Button(action: { isShowingPercentage.toggle() }) {
+					Text(subtitle)
+						.font(.caption2)
+						.foregroundStyle(.secondary)
+						.contentTransition(.numericText())
+						.animation(.default, value: subtitle)
+				}
+				.buttonStyle(.plain)
 			}
 
 			ToolbarItem {
 				Toggle(isOn: $showingOnlyMissing.animation(.default)) {
-					Label("Missing Only", image: .pokeball)
+					Label("Missing Only", systemImage: "line.3.horizontal.decrease.circle")
 				}
 			}
+		}
+		.sheet(isPresented: $isAddingGame) {
+			NavigationStack {
+				GameCreationSheet()
+			}
+			.presentationDetents([.medium, .large])
 		}
 	}
 }
@@ -92,6 +125,6 @@ struct ContentView: View {
 	}
 
 	NavigationStack {
-		ContentView()
+		GameScreen(currentGameID: .constant(Game.sampleData.id))
 	}
 }

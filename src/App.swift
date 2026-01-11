@@ -17,7 +17,7 @@ struct PocketApp: App {
 	var body: some Scene {
 		WindowGroup {
 			NavigationStack {
-				ContentView()
+				RootContainer()
 			}
 		}
 	}

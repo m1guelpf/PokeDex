@@ -3,6 +3,7 @@ import TinyStorage
 
 extension TinyStorage {
 	enum Keys: String, TinyStorageKey {
+		case activeGameId
 		case showingPercentage
 		case showingOnlyMissing
 	}
