@@ -24,9 +24,11 @@ struct RootContainer: View {
 	}
 
 	func repareCurrentGameIfNeeded() {
-		guard currentGameID == nil, let firstGame = games.first else { return }
+		guard let firstGame = games.first else { return }
 
-		currentGameID = firstGame.id
+		if currentGameID == nil || !games.contains(where: { $0.id == currentGameID }) {
+			currentGameID = firstGame.id
+		}
 	}
 }
 
