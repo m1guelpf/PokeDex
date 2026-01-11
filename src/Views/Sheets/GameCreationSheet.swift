@@ -2,18 +2,16 @@ import SwiftUI
 import SQLiteData
 import TinyStorage
 
-let manifest = try! GameManifest.load()
+fileprivate let manifest = try! GameManifest.load()
 
 struct GameCreationSheet: View {
 	enum Stage: Equatable {
 		case selectingGame
-		case selectingStarter(game: GameManifest.Game)
 		case downloading(progress: Double)
-		case completed
 	}
 
-	@State var selectedStarter: String?
 	@State var stage: Stage = .selectingGame
+	@Environment(\.dismiss) private var dismiss
 	@FetchAll(Game.all) private var games: [Game]
 
 	var body: some View {
@@ -22,18 +20,15 @@ struct GameCreationSheet: View {
 				case .selectingGame:
 					List {
 						ForEach(manifest.games, id: \.slug) { game in
-							GameCard(game: game, stage: $stage)
+							GameCard(game: game) {
+								Task { await setup(game: game) }
+							}
 						}
 					}
 					.safeAreaPadding()
 					.toolbarTitleDisplayMode(.inline)
 					.navigationTitle("Choose your game")
 					.navigationSubtitle("Select which Pokemon game you're playing")
-
-				case let .selectingStarter(game):
-					StarterSelectionView(game: game) { starter in
-						Task { await setup(game: game, starter: starter) }
-					}
 
 				case let .downloading(progress):
 					VStack(spacing: 30) {
@@ -63,55 +58,32 @@ struct GameCreationSheet: View {
 					}
 					.padding()
 					.interactiveDismissDisabled()
-
-				case .completed:
-					VStack(spacing: 20) {
-						Image(systemName: "checkmark.circle.fill")
-							.resizable()
-							.scaledToFit()
-							.frame(width: 80)
-							.foregroundStyle(.green)
-
-						Text("All Set!")
-							.font(.largeTitle)
-							.fontWeight(.bold)
-
-						Text("Your PokeDex is ready to use")
-							.foregroundStyle(.secondary)
-					}
-					.padding()
 			}
 		}
 	}
 
-	func setup(game gameData: GameManifest.Game, starter: String?) async {
-		selectedStarter = starter
-
-		let availablePokemon = gameData.pokemon.filter { pokemon in
-			guard let starter = starter else { return true }
-			return pokemon.isAvailable(forStarter: starter)
-		}
-
+	func setup(game gameData: GameManifest.Game) async {
 		let game = Game(
 			id: UUID(),
 			slug: gameData.slug,
 			name: gameData.name,
 			generation: gameData.generation,
-			totalPokemon: availablePokemon.count,
 			dataVersion: manifest.version,
-			selectedStarter: starter,
 			spriteURLTemplate: "https://img.pokemondb.net/sprites/\(gameData.spriteGeneration)/normal/{sprite}.png",
 			createdAt: Date()
 		)
 
-		let pokemon = availablePokemon.map { pokemonData in
+		let pokemon = gameData.pokemon.map { pokemonData in
 			Pokemon(
 				id: UUID(),
 				gameId: game.id,
 				name: pokemonData.name,
+				spriteName: pokemonData.spriteSlug,
 				notes: pokemonData.notes,
 				dexNumber: pokemonData.dexNumber,
-				isRegistered: false
+				isRegistered: false,
+				exclusiveGroup: pokemonData.exclusiveGroup,
+				exclusiveOption: pokemonData.exclusiveOption
 			)
 		}
 
@@ -131,7 +103,7 @@ struct GameCreationSheet: View {
 			}
 		}
 
-		stage = .completed
+		dismiss()
 	}
 }
 

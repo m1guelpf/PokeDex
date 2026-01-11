@@ -13,7 +13,7 @@ class SpriteManager {
 	private var imageCache: [String: Image] = [:]
 
 	func get(for pokemon: Pokemon, in game: Game) -> Image {
-		let cacheKey = "\(game.slug)-\(pokemon.imageName)"
+		let cacheKey = "\(game.slug)-\(pokemon.spriteName)"
 
 		if let cached = imageCache[cacheKey] { return cached }
 
@@ -156,7 +156,7 @@ extension SpriteManager {
 
 	@concurrent private nonisolated func download(for pokemon: Pokemon, in game: Game) async throws {
 		guard let url = game.sprite(for: pokemon) else {
-			throw DownloadError.invalidSpriteUrl(pokemon.imageName)
+			throw DownloadError.invalidSpriteUrl(pokemon.spriteName)
 		}
 
 		let (data, response) = try await URLSession.shared.data(from: url)

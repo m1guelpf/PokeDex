@@ -2,10 +2,10 @@ import SwiftUI
 
 struct GameCard: View {
 	var game: GameManifest.Game
-	@Binding var stage: GameCreationSheet.Stage
+	var action: () -> Void
 
 	var body: some View {
-		Button(action: { stage = .selectingStarter(game: game) }) {
+		Button(action: action) {
 			VStack(spacing: 12) {
 				Image(.pokeball)
 					.resizable()

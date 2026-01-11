@@ -9,20 +9,15 @@ struct GameManifest: Equatable, Codable, Sendable {
 			let notes: String
 			let dexNumber: Int
 			let spriteSlug: String
-			let excludedForStarters: [String]
-
-			func isAvailable(forStarter starter: String) -> Bool {
-				!excludedForStarters.contains(starter)
-			}
+			let exclusiveGroup: String?
+			let exclusiveOption: String?
 		}
 
 		let slug: String
 		let name: String
 		let generation: Int
 		let pokemon: [Pokemon]
-		let hasStarterChoice: Bool
 		let spriteGeneration: String
-		let availableStarters: [String]
 	}
 
 	let version: String

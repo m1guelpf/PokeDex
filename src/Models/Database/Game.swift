@@ -8,14 +8,12 @@ struct Game: Identifiable, Equatable, Hashable, Sendable {
 	var slug: String
 	var name: String
 	var generation: Int
-	var totalPokemon: Int
 	var dataVersion: String
-	var selectedStarter: String?
 	var spriteURLTemplate: String
 	@Column(as: Date.UnixTimeRepresentation.self) var createdAt: Date
 
 	func sprite(for pokemon: Pokemon) -> URL? {
-		URL(string: spriteURLTemplate.replacing("{sprite}", with: pokemon.imageName))
+		URL(string: spriteURLTemplate.replacing("{sprite}", with: pokemon.spriteName))
 	}
 
 	@MainActor func delete(_ game: Game) {
@@ -49,9 +47,7 @@ extension Game {
 		slug: "firered",
 		name: "Pokemon FireRed",
 		generation: 3,
-		totalPokemon: 151,
 		dataVersion: "1.0",
-		selectedStarter: "bulbasaur",
 		spriteURLTemplate: "https://img.pokemondb.net/sprites/ruby-sapphire/normal/{sprite}.png",
 		createdAt: Date()
 	)

@@ -6,1254 +6,1118 @@
 			"name": "Pokemon FireRed",
 			"generation": 3,
 			"spriteGeneration": "ruby-sapphire",
-			"hasStarterChoice": true,
-			"availableStarters": ["bulbasaur", "charmander", "squirtle"],
 			"pokemon": [
 				{
 					"dexNumber": 1,
 					"name": "Bulbasaur",
-					"notes": "Your starter and first Pok\u00e9dex entry!",
+					"notes": "Your starter and first Pokédex entry!",
 					"spriteSlug": "bulbasaur",
-					"excludedForStarters": ["charmander", "squirtle"]
+					"exclusiveGroup": "kanto-starter",
+					"exclusiveOption": "bulbasaur"
 				},
 				{
 					"dexNumber": 2,
 					"name": "Ivysaur",
 					"notes": "Evolves at level 16",
 					"spriteSlug": "ivysaur",
-					"excludedForStarters": ["charmander", "squirtle"]
+					"exclusiveGroup": "kanto-starter",
+					"exclusiveOption": "bulbasaur"
 				},
 				{
 					"dexNumber": 3,
 					"name": "Venusaur",
 					"notes": "Evolves at level 32",
 					"spriteSlug": "venusaur",
-					"excludedForStarters": ["charmander", "squirtle"]
+					"exclusiveGroup": "kanto-starter",
+					"exclusiveOption": "bulbasaur"
 				},
 				{
 					"dexNumber": 4,
 					"name": "Charmander",
-					"notes": "Your starter and first Pok\u00e9dex entry!",
+					"notes": "Your starter and first Pokédex entry!",
 					"spriteSlug": "charmander",
-					"excludedForStarters": ["bulbasaur", "squirtle"]
+					"exclusiveGroup": "kanto-starter",
+					"exclusiveOption": "charmander"
 				},
 				{
 					"dexNumber": 5,
 					"name": "Charmeleon",
 					"notes": "Evolves at level 16",
 					"spriteSlug": "charmeleon",
-					"excludedForStarters": ["bulbasaur", "squirtle"]
+					"exclusiveGroup": "kanto-starter",
+					"exclusiveOption": "charmander"
 				},
 				{
 					"dexNumber": 6,
 					"name": "Charizard",
 					"notes": "Evolves at level 32",
 					"spriteSlug": "charizard",
-					"excludedForStarters": ["bulbasaur", "squirtle"]
+					"exclusiveGroup": "kanto-starter",
+					"exclusiveOption": "charmander"
 				},
 				{
 					"dexNumber": 7,
 					"name": "Squirtle",
-					"notes": "Your starter and first Pok\u00e9dex entry!",
+					"notes": "Your starter and first Pokédex entry!",
 					"spriteSlug": "squirtle",
-					"excludedForStarters": ["bulbasaur", "charmander"]
+					"exclusiveGroup": "kanto-starter",
+					"exclusiveOption": "squirtle"
 				},
 				{
 					"dexNumber": 8,
 					"name": "Wartortle",
 					"notes": "Evolves at level 16",
 					"spriteSlug": "wartortle",
-					"excludedForStarters": ["bulbasaur", "charmander"]
+					"exclusiveGroup": "kanto-starter",
+					"exclusiveOption": "squirtle"
 				},
 				{
 					"dexNumber": 9,
 					"name": "Blastoise",
 					"notes": "Evolves at level 32",
 					"spriteSlug": "blastoise",
-					"excludedForStarters": ["bulbasaur", "charmander"]
+					"exclusiveGroup": "kanto-starter",
+					"exclusiveOption": "squirtle"
 				},
 				{
 					"dexNumber": 10,
 					"name": "Caterpie",
 					"notes": "Catch in Viridian Forest. Also found in Route 25 and Pattern Bush.",
-					"spriteSlug": "caterpie",
-					"excludedForStarters": []
+					"spriteSlug": "caterpie"
 				},
 				{
 					"dexNumber": 11,
 					"name": "Metapod",
 					"notes": "Catch in Viridian Forest. Also found in Route 25 and Pattern Bush. Evolves at level 7.",
-					"spriteSlug": "metapod",
-					"excludedForStarters": []
+					"spriteSlug": "metapod"
 				},
 				{
 					"dexNumber": 12,
 					"name": "Butterfree",
 					"notes": "Must evolve from Metapod at level 10",
-					"spriteSlug": "butterfree",
-					"excludedForStarters": []
+					"spriteSlug": "butterfree"
 				},
 				{
 					"dexNumber": 13,
 					"name": "Weedle",
 					"notes": "Catch in Viridian Forest. Also found in Route 25 and Pattern Bush.",
-					"spriteSlug": "weedle",
-					"excludedForStarters": []
+					"spriteSlug": "weedle"
 				},
 				{
 					"dexNumber": 14,
 					"name": "Kakuna",
 					"notes": "Catch in Viridian Forest. Also found in Route 25 and Pattern Bush. Evolves at level 7.",
-					"spriteSlug": "kakuna",
-					"excludedForStarters": []
+					"spriteSlug": "kakuna"
 				},
 				{
 					"dexNumber": 15,
 					"name": "Beedrill",
 					"notes": "Must evolve from Kakuna at level 10",
-					"spriteSlug": "beedrill",
-					"excludedForStarters": []
+					"spriteSlug": "beedrill"
 				},
 				{
 					"dexNumber": 16,
 					"name": "Pidgey",
 					"notes": "Found in numerous routes",
-					"spriteSlug": "pidgey",
-					"excludedForStarters": []
+					"spriteSlug": "pidgey"
 				},
 				{
 					"dexNumber": 17,
 					"name": "Pidgeotto",
 					"notes": "Not as plentiful to catch in FireRed. Evolves at level 18.",
-					"spriteSlug": "pidgeotto",
-					"excludedForStarters": []
+					"spriteSlug": "pidgeotto"
 				},
 				{
 					"dexNumber": 18,
 					"name": "Pidgeot",
 					"notes": "Must evolve Pidgeotto at level 36",
-					"spriteSlug": "pidgeot",
-					"excludedForStarters": []
+					"spriteSlug": "pidgeot"
 				},
 				{
 					"dexNumber": 19,
 					"name": "Rattata",
-					"notes": "Found in numerous routes and the Pok\u00e9mon Mansion",
-					"spriteSlug": "rattata",
-					"excludedForStarters": []
+					"notes": "Found in numerous routes and the Pokémon Mansion",
+					"spriteSlug": "rattata"
 				},
 				{
 					"dexNumber": 20,
 					"name": "Raticate",
-					"notes": "Catch on Route 17, 18, or the Pok\u00e9mon Mansion. Evolves from Ratatta at level 20.",
-					"spriteSlug": "raticate",
-					"excludedForStarters": []
+					"notes": "Catch on Route 17, 18, or the Pokémon Mansion. Evolves from Ratatta at level 20.",
+					"spriteSlug": "raticate"
 				},
 				{
 					"dexNumber": 21,
 					"name": "Spearow",
 					"notes": "Found in numerous routes",
-					"spriteSlug": "spearow",
-					"excludedForStarters": []
+					"spriteSlug": "spearow"
 				},
 				{
 					"dexNumber": 22,
 					"name": "Fearow",
 					"notes": "Catch on Route 17, 18, 23, or many Sevii Island paths. Evolves from Spearow at level 20.",
-					"spriteSlug": "fearow",
-					"excludedForStarters": []
+					"spriteSlug": "fearow"
 				},
 				{
 					"dexNumber": 23,
 					"name": "Ekans",
 					"notes": "Found on Route 4, 8, 9, 10, 11, 22, and 23",
-					"spriteSlug": "ekans",
-					"excludedForStarters": []
+					"spriteSlug": "ekans"
 				},
 				{
 					"dexNumber": 24,
 					"name": "Arbok",
 					"notes": "Found on Route 23 and Victory Road. Evolves from Ekans at level 22.",
-					"spriteSlug": "arbok",
-					"excludedForStarters": []
+					"spriteSlug": "arbok"
 				},
 				{
 					"dexNumber": 25,
 					"name": "Pikachu",
 					"notes": "Found in Viridian Forest or the Power Plant",
-					"spriteSlug": "pikachu",
-					"excludedForStarters": []
+					"spriteSlug": "pikachu"
 				},
 				{
 					"dexNumber": 26,
 					"name": "Raichu",
 					"notes": "Evolve from Pikachu with a Thunder Stone (can buy in Celadon Store or find in the Power Plant)",
-					"spriteSlug": "raichu",
-					"excludedForStarters": []
+					"spriteSlug": "raichu"
 				},
 				{
 					"dexNumber": 29,
-					"name": "Nidoran\u2640",
-					"notes": "Trade a Nidoran\u2642 for one with an NPC on Route 5. Found on Route 3 (low encounter rate) and Safari Zone areas 1 (East) & 2 (North).",
-					"spriteSlug": "nidoran-f",
-					"excludedForStarters": []
+					"name": "Nidoran♀",
+					"notes": "Trade a Nidoran♂ for one with an NPC on Route 5. Found on Route 3 (low encounter rate) and Safari Zone areas 1 (East) & 2 (North).",
+					"spriteSlug": "nidoran-f"
 				},
 				{
 					"dexNumber": 30,
 					"name": "Nidorina",
-					"notes": "Trade a Nidorino for one with an NPC on Route 11. Found in Safari Zone areas 1 (East) & 2 (North). Evolves from Nidoran\u2640 at level 16.",
-					"spriteSlug": "nidorina",
-					"excludedForStarters": []
+					"notes": "Trade a Nidorino for one with an NPC on Route 11. Found in Safari Zone areas 1 (East) & 2 (North). Evolves from Nidoran♀ at level 16.",
+					"spriteSlug": "nidorina"
 				},
 				{
 					"dexNumber": 31,
 					"name": "Nidoqueen",
 					"notes": "Evolve from Nidorina with a Moon Stone",
-					"spriteSlug": "nidoqueen",
-					"excludedForStarters": []
+					"spriteSlug": "nidoqueen"
 				},
 				{
 					"dexNumber": 32,
-					"name": "Nidoran\u2642",
+					"name": "Nidoran♂",
 					"notes": "Found on Route 3 and all Safari Zone areas",
-					"spriteSlug": "nidoran-m",
-					"excludedForStarters": []
+					"spriteSlug": "nidoran-m"
 				},
 				{
 					"dexNumber": 33,
 					"name": "Nidorino",
-					"notes": "Found in all Safari Zone areas. Evolves from Nidoran\u2642 at level 16.",
-					"spriteSlug": "nidorino",
-					"excludedForStarters": []
+					"notes": "Found in all Safari Zone areas. Evolves from Nidoran♂ at level 16.",
+					"spriteSlug": "nidorino"
 				},
 				{
 					"dexNumber": 34,
 					"name": "Nidoking",
 					"notes": "Evolve from Nidorino with a Moon Stone",
-					"spriteSlug": "nidoking",
-					"excludedForStarters": []
+					"spriteSlug": "nidoking"
 				},
 				{
 					"dexNumber": 35,
 					"name": "Clefairy",
 					"notes": "Found in Mt. Moon on the first floor or basement 2. They have a low encounter rate so a short grind may be needed to find one.",
-					"spriteSlug": "clefairy",
-					"excludedForStarters": []
+					"spriteSlug": "clefairy"
 				},
 				{
 					"dexNumber": 36,
 					"name": "Clefable",
 					"notes": "Evolve from Clefairy with a Moon Stone",
-					"spriteSlug": "clefable",
-					"excludedForStarters": []
+					"spriteSlug": "clefable"
 				},
 				{
 					"dexNumber": 39,
 					"name": "Jigglypuff",
 					"notes": "Found on Route 3",
-					"spriteSlug": "jigglypuff",
-					"excludedForStarters": []
+					"spriteSlug": "jigglypuff"
 				},
 				{
 					"dexNumber": 40,
 					"name": "Wigglytuff",
 					"notes": "Evolve from Jigglypuff with a Moon Stone",
-					"spriteSlug": "wigglytuff",
-					"excludedForStarters": []
+					"spriteSlug": "wigglytuff"
 				},
 				{
 					"dexNumber": 41,
 					"name": "Zubat",
 					"notes": "Plentiful! Name a cave and it is there!",
-					"spriteSlug": "zubat",
-					"excludedForStarters": []
+					"spriteSlug": "zubat"
 				},
 				{
 					"dexNumber": 42,
 					"name": "Golbat",
 					"notes": "Almost as plentiful as Zubat! Can also evolve from Zubat at level 22.",
-					"spriteSlug": "golbat",
-					"excludedForStarters": []
+					"spriteSlug": "golbat"
 				},
 				{
 					"dexNumber": 43,
 					"name": "Oddish",
 					"notes": "Found on many routes, starting from Route 5.",
-					"spriteSlug": "oddish",
-					"excludedForStarters": []
+					"spriteSlug": "oddish"
 				},
 				{
 					"dexNumber": 44,
 					"name": "Gloom",
 					"notes": "Found on Route 12, 13, 14, 15, and some Sevii Island areas. Evolves from Oddish at level 21.",
-					"spriteSlug": "gloom",
-					"excludedForStarters": []
+					"spriteSlug": "gloom"
 				},
 				{
 					"dexNumber": 45,
 					"name": "Vileplume",
 					"notes": "Evolve from Gloom with a Leaf Stone (can find in Safari Zone or buy from Celadon Store)",
-					"spriteSlug": "vileplume",
-					"excludedForStarters": []
+					"spriteSlug": "vileplume"
 				},
 				{
 					"dexNumber": 46,
 					"name": "Paras",
 					"notes": "Found in Mt. Moon (all floors) and most Safari Zone areas",
-					"spriteSlug": "paras",
-					"excludedForStarters": []
+					"spriteSlug": "paras"
 				},
 				{
 					"dexNumber": 47,
 					"name": "Parasect",
 					"notes": "Found in some Safari Zone areas and all Cerulean Cave floors. Evolve from Paras at level 24.",
-					"spriteSlug": "parasect",
-					"excludedForStarters": []
+					"spriteSlug": "parasect"
 				},
 				{
 					"dexNumber": 48,
 					"name": "Venonat",
 					"notes": "Found on Route 12, 13, 14, 15, Safari Zone Area 3 (East) and Central Area, and some Sevii Island areas",
-					"spriteSlug": "venonat",
-					"excludedForStarters": []
+					"spriteSlug": "venonat"
 				},
 				{
 					"dexNumber": 49,
 					"name": "Venomoth",
 					"notes": "Found in most Safari Zone areas and Berry Forest. Evolve from Venonat at level 31.",
-					"spriteSlug": "venomoth",
-					"excludedForStarters": []
+					"spriteSlug": "venomoth"
 				},
 				{
 					"dexNumber": 50,
 					"name": "Diglett",
 					"notes": "Found in Diglett Cave",
-					"spriteSlug": "diglett",
-					"excludedForStarters": []
+					"spriteSlug": "diglett"
 				},
 				{
 					"dexNumber": 51,
 					"name": "Dugtrio",
 					"notes": "Found in Diglett Cave. Evolve from Diglett at level 26.",
-					"spriteSlug": "dugtrio",
-					"excludedForStarters": []
+					"spriteSlug": "dugtrio"
 				},
 				{
 					"dexNumber": 52,
 					"name": "Meowth",
 					"notes": "Found on Route 5, 6, 7, 8, and most Sevii Island areas",
-					"spriteSlug": "meowth",
-					"excludedForStarters": []
+					"spriteSlug": "meowth"
 				},
 				{
 					"dexNumber": 53,
 					"name": "Persian",
 					"notes": "Found in most Sevii Island areas. Evolve from Meowth at level 28.",
-					"spriteSlug": "persian",
-					"excludedForStarters": []
+					"spriteSlug": "persian"
 				},
 				{
 					"dexNumber": 54,
 					"name": "Psyduck",
 					"notes": "Found on many routes via Surfing",
-					"spriteSlug": "psyduck",
-					"excludedForStarters": []
+					"spriteSlug": "psyduck"
 				},
 				{
 					"dexNumber": 55,
 					"name": "Golduck",
 					"notes": "Found in all Seafoam Island floors, Cerulean Cave Floor 1 and Basement 1, and a couple Sevii Island areas. Evolve from Psyduck at level 33.",
-					"spriteSlug": "golduck",
-					"excludedForStarters": []
+					"spriteSlug": "golduck"
 				},
 				{
 					"dexNumber": 56,
 					"name": "Mankey",
 					"notes": "Found on Route 3, 4, 22, 23, and Rock Tunnel",
-					"spriteSlug": "mankey",
-					"excludedForStarters": []
+					"spriteSlug": "mankey"
 				},
 				{
 					"dexNumber": 57,
 					"name": "Primeape",
 					"notes": "Found on Route 23, Victory Road Floor 2, and Cerulean Cave Floor 1. Evolve from Mankey at level 28.",
-					"spriteSlug": "primeape",
-					"excludedForStarters": []
+					"spriteSlug": "primeape"
 				},
 				{
 					"dexNumber": 58,
 					"name": "Growlithe",
-					"notes": "Found on Route 7, 8, and all Pok\u00e9mon Mansion floors",
-					"spriteSlug": "growlithe",
-					"excludedForStarters": []
+					"notes": "Found on Route 7, 8, and all Pokémon Mansion floors",
+					"spriteSlug": "growlithe"
 				},
 				{
 					"dexNumber": 59,
 					"name": "Arcanine",
 					"notes": "Evolve from Growlithe with a Fire Stone (can find in Mt. Ember or buy from Celadon Store).",
-					"spriteSlug": "arcanine",
-					"excludedForStarters": []
+					"spriteSlug": "arcanine"
 				},
 				{
 					"dexNumber": 60,
 					"name": "Poliwag",
 					"notes": "Found by fishing with Good or Super Rod in many locations",
-					"spriteSlug": "poliwag",
-					"excludedForStarters": []
+					"spriteSlug": "poliwag"
 				},
 				{
 					"dexNumber": 61,
 					"name": "Poliwhirl",
 					"notes": "Found by fishing with the Super Rod in many locations. Evolve from Poliwag at level 25.",
-					"spriteSlug": "poliwhirl",
-					"excludedForStarters": []
+					"spriteSlug": "poliwhirl"
 				},
 				{
 					"dexNumber": 62,
 					"name": "Poliwrath",
 					"notes": "Evolve from Poliwhirl with a Water Stone (can find in Seafoam Islands or buy from Celadon Store).",
-					"spriteSlug": "poliwrath",
-					"excludedForStarters": []
+					"spriteSlug": "poliwrath"
 				},
 				{
 					"dexNumber": 63,
 					"name": "Abra",
 					"notes": "Found on Route 24 and 25. They only know Teleport so you must catch or status effect on the first round.",
-					"spriteSlug": "abra",
-					"excludedForStarters": []
+					"spriteSlug": "abra"
 				},
 				{
 					"dexNumber": 64,
 					"name": "Kadabra",
 					"notes": "Found in Cerulean Cave Floor 2 or Basement 1. Evolve from Abra at level 16.",
-					"spriteSlug": "kadabra",
-					"excludedForStarters": []
+					"spriteSlug": "kadabra"
 				},
 				{
 					"dexNumber": 66,
 					"name": "Machop",
 					"notes": "Found in Mt. Ember, Rock Tunnel, and Victory Road",
-					"spriteSlug": "machop",
-					"excludedForStarters": []
+					"spriteSlug": "machop"
 				},
 				{
 					"dexNumber": 67,
 					"name": "Machoke",
 					"notes": "Found in Mt. Ember, Victory Road, and Cerulean Cave. Evolve from Machop at level 28.",
-					"spriteSlug": "machoke",
-					"excludedForStarters": []
+					"spriteSlug": "machoke"
 				},
 				{
 					"dexNumber": 72,
 					"name": "Tentacool",
 					"notes": "Plentiful! If you can Surf, you will find one!",
-					"spriteSlug": "tentacool",
-					"excludedForStarters": []
+					"spriteSlug": "tentacool"
 				},
 				{
 					"dexNumber": 73,
 					"name": "Tentacruel",
 					"notes": "Plentiful on Sevii Island's Surfing paths! Evolve from Tentacool at level 30.",
-					"spriteSlug": "tentacruel",
-					"excludedForStarters": []
+					"spriteSlug": "tentacruel"
 				},
 				{
 					"dexNumber": 74,
 					"name": "Geodude",
 					"notes": "Found in Mt. Moon, Rock Tunnel, Cerulean Cave, and Sevii Island caves. Also randomly spawn from Rock Smashing rocks.",
-					"spriteSlug": "geodude",
-					"excludedForStarters": []
+					"spriteSlug": "geodude"
 				},
 				{
 					"dexNumber": 75,
 					"name": "Graveler",
 					"notes": "Found in the same areas as Geodude. Evolve from Geodude at level 25.",
-					"spriteSlug": "graveler",
-					"excludedForStarters": []
+					"spriteSlug": "graveler"
 				},
 				{
 					"dexNumber": 77,
 					"name": "Ponyta",
 					"notes": "Found on Kindle Road or Mt. Ember",
-					"spriteSlug": "ponyta",
-					"excludedForStarters": []
+					"spriteSlug": "ponyta"
 				},
 				{
 					"dexNumber": 78,
 					"name": "Rapidash",
 					"notes": "Found on Kindle Road or Mt. Ember. Evolve from Ponyta at level 40.",
-					"spriteSlug": "rapidash",
-					"excludedForStarters": []
+					"spriteSlug": "rapidash"
 				},
 				{
 					"dexNumber": 81,
 					"name": "Magnemite",
 					"notes": "Found in the Power Plant",
-					"spriteSlug": "magnemite",
-					"excludedForStarters": []
+					"spriteSlug": "magnemite"
 				},
 				{
 					"dexNumber": 82,
 					"name": "Magneton",
 					"notes": "Found in the Power Plant and Cerulean Cave. Evolve from Magnemite at level 30.",
-					"spriteSlug": "magneton",
-					"excludedForStarters": []
+					"spriteSlug": "magneton"
 				},
 				{
 					"dexNumber": 83,
 					"name": "Farfetch'd",
 					"notes": "Trade a Spearow for one with an NPC in Vermillion City",
-					"spriteSlug": "farfetchd",
-					"excludedForStarters": []
+					"spriteSlug": "farfetchd"
 				},
 				{
 					"dexNumber": 84,
 					"name": "Doduo",
 					"notes": "Found on Route 16, 17, 18, and in most Safari Zone areas",
-					"spriteSlug": "doduo",
-					"excludedForStarters": []
+					"spriteSlug": "doduo"
 				},
 				{
 					"dexNumber": 85,
 					"name": "Dodrio",
 					"notes": "Evolve a Doduo at level 31",
-					"spriteSlug": "dodrio",
-					"excludedForStarters": []
+					"spriteSlug": "dodrio"
 				},
 				{
 					"dexNumber": 86,
 					"name": "Seel",
 					"notes": "Found in all Seafoam Island floors and Icefall Cave floor 1/basement 1 as random encounters or during Surfing",
-					"spriteSlug": "seel",
-					"excludedForStarters": []
+					"spriteSlug": "seel"
 				},
 				{
 					"dexNumber": 87,
 					"name": "Dewgong",
 					"notes": "Found in Seafoam Island basement 3 & 4 and Icefall Cave floor 1/basement 1. Evolve from Seel at level 34.",
-					"spriteSlug": "dewgong",
-					"excludedForStarters": []
+					"spriteSlug": "dewgong"
 				},
 				{
 					"dexNumber": 88,
 					"name": "Grimer",
-					"notes": "Rare encounters in Pok\u00e9mon Mansion or Celadon City Super Rod fishing",
-					"spriteSlug": "grimer",
-					"excludedForStarters": []
+					"notes": "Rare encounters in Pokémon Mansion or Celadon City Super Rod fishing",
+					"spriteSlug": "grimer"
 				},
 				{
 					"dexNumber": 89,
 					"name": "Muk",
 					"notes": "Evolve from Grimer at level 38",
-					"spriteSlug": "muk",
-					"excludedForStarters": []
+					"spriteSlug": "muk"
 				},
 				{
 					"dexNumber": 90,
 					"name": "Shellder",
 					"notes": "Found in Pallet Town, S.S. Anne, Cinnabar Island, and some Sevii Island locations via fishing with Super Rod",
-					"spriteSlug": "shellder",
-					"excludedForStarters": []
+					"spriteSlug": "shellder"
 				},
 				{
 					"dexNumber": 91,
 					"name": "Cloyster",
 					"notes": "Evolve from Shellder with a Water Stone (can find in Seafoam Islands or buy from Celadon Store)",
-					"spriteSlug": "cloyster",
-					"excludedForStarters": []
+					"spriteSlug": "cloyster"
 				},
 				{
 					"dexNumber": 92,
 					"name": "Gastly",
-					"notes": "Found in Pok\u00e9mon Tower and Lost Cave",
-					"spriteSlug": "gastly",
-					"excludedForStarters": []
+					"notes": "Found in Pokémon Tower and Lost Cave",
+					"spriteSlug": "gastly"
 				},
 				{
 					"dexNumber": 93,
 					"name": "Haunter",
-					"notes": "Found in Pok\u00e9mon Tower and Lost Cave. Evolve from Gastly at level 25.",
-					"spriteSlug": "haunter",
-					"excludedForStarters": []
+					"notes": "Found in Pokémon Tower and Lost Cave. Evolve from Gastly at level 25.",
+					"spriteSlug": "haunter"
 				},
 				{
 					"dexNumber": 95,
 					"name": "Onix",
 					"notes": "Found in Rock Tunnel, Victory Road, and Sevault Canyon",
-					"spriteSlug": "onix",
-					"excludedForStarters": []
+					"spriteSlug": "onix"
 				},
 				{
 					"dexNumber": 96,
 					"name": "Drowzee",
 					"notes": "Found on Route 11 and Berry Forest",
-					"spriteSlug": "drowzee",
-					"excludedForStarters": []
+					"spriteSlug": "drowzee"
 				},
 				{
 					"dexNumber": 97,
 					"name": "Hypno",
 					"notes": "Found in Berry Forest. Evolve from Drowzee at level 26.",
-					"spriteSlug": "hypno",
-					"excludedForStarters": []
+					"spriteSlug": "hypno"
 				},
 				{
 					"dexNumber": 98,
 					"name": "Krabby",
 					"notes": "Lots of routes and towns have them via fishing with the Good Rod at a lower (but not awful) encounter rate",
-					"spriteSlug": "krabby",
-					"excludedForStarters": []
+					"spriteSlug": "krabby"
 				},
 				{
 					"dexNumber": 99,
 					"name": "Kingler",
 					"notes": "Evolve from Krabby at level 28",
-					"spriteSlug": "kingler",
-					"excludedForStarters": []
+					"spriteSlug": "kingler"
 				},
 				{
 					"dexNumber": 100,
 					"name": "Voltorb",
-					"notes": "Found on Route 10 and the Power Plant (fake Pok\u00e9balls and random encounters)",
-					"spriteSlug": "voltorb",
-					"excludedForStarters": []
+					"notes": "Found on Route 10 and the Power Plant (fake Pokéballs and random encounters)",
+					"spriteSlug": "voltorb"
 				},
 				{
 					"dexNumber": 101,
 					"name": "Electrode",
 					"notes": "Found in Cerulean Cave Floors 1 and 2 or Basement 1. Evolve from Voltorb at level 30.",
-					"spriteSlug": "electrode",
-					"excludedForStarters": []
+					"spriteSlug": "electrode"
 				},
 				{
 					"dexNumber": 102,
 					"name": "Exeggcute",
 					"notes": "Found in all Safari Zone areas and Berry Forest",
-					"spriteSlug": "exeggcute",
-					"excludedForStarters": []
+					"spriteSlug": "exeggcute"
 				},
 				{
 					"dexNumber": 103,
 					"name": "Exeggutor",
 					"notes": "Evolve from Exeggcute with a Leaf Stone (can find in Safari Zone or buy in Celadon Store).",
-					"spriteSlug": "exeggutor",
-					"excludedForStarters": []
+					"spriteSlug": "exeggutor"
 				},
 				{
 					"dexNumber": 104,
 					"name": "Cubone",
-					"notes": "Found in Pok\u00e9mon Tower and Sevault Canyon",
-					"spriteSlug": "cubone",
-					"excludedForStarters": []
+					"notes": "Found in Pokémon Tower and Sevault Canyon",
+					"spriteSlug": "cubone"
 				},
 				{
 					"dexNumber": 105,
 					"name": "Marowak",
 					"notes": "Found in Victory Road and Sevault Canyon. Evolve from Cubone at level 28.",
-					"spriteSlug": "marowak",
-					"excludedForStarters": []
+					"spriteSlug": "marowak"
 				},
 				{
 					"dexNumber": 106,
 					"name": "Hitmonlee",
 					"notes": "Choose either this or Hitmonchan after completing the Karate Dojo. Otherwise, you must evolve it from Tyrogue at level 20.",
-					"spriteSlug": "hitmonlee",
-					"excludedForStarters": []
+					"spriteSlug": "hitmonlee"
 				},
 				{
 					"dexNumber": 107,
 					"name": "Hitmonchan",
 					"notes": "Choose either this or Hitmonchan after completing the Karate Dojo. Otherwise, you must evolve it from Tyrogue at level 20.",
-					"spriteSlug": "hitmonchan",
-					"excludedForStarters": []
+					"spriteSlug": "hitmonchan"
 				},
 				{
 					"dexNumber": 108,
 					"name": "Lickitung",
 					"notes": "Trade a Golduck for one with an NPC at Route 18's gate",
-					"spriteSlug": "lickitung",
-					"excludedForStarters": []
+					"spriteSlug": "lickitung"
 				},
 				{
 					"dexNumber": 109,
 					"name": "Koffing",
-					"notes": "Found in Pok\u00e9mon Mansion and rarely while Surfing in Celadon City",
-					"spriteSlug": "koffing",
-					"excludedForStarters": []
+					"notes": "Found in Pokémon Mansion and rarely while Surfing in Celadon City",
+					"spriteSlug": "koffing"
 				},
 				{
 					"dexNumber": 110,
 					"name": "Weezing",
-					"notes": "Found in Pok\u00e9mon Mansion (rare encounter). Evolves from Koffing at level 35.",
-					"spriteSlug": "weezing",
-					"excludedForStarters": []
+					"notes": "Found in Pokémon Mansion (rare encounter). Evolves from Koffing at level 35.",
+					"spriteSlug": "weezing"
 				},
 				{
 					"dexNumber": 111,
 					"name": "Rhyhorn",
 					"notes": "Found in Safari Zone Area 2 (North) and Center Area",
-					"spriteSlug": "rhyhorn",
-					"excludedForStarters": []
+					"spriteSlug": "rhyhorn"
 				},
 				{
 					"dexNumber": 112,
 					"name": "Rhydon",
 					"notes": "Evolve from Rhyhorn at level 42",
-					"spriteSlug": "rhydon",
-					"excludedForStarters": []
+					"spriteSlug": "rhydon"
 				},
 				{
 					"dexNumber": 113,
 					"name": "Chansey",
 					"notes": "Found in Safari Zone Area 2 (North) at a 4% encounter rate and Center Area at a 1% encounter rate. Getting the achievement by catching this will help prep your strategy for Tauros and Kangaskhan as well. I used Bait once and Rock once or twice before throwing a ball to do this catch.",
-					"spriteSlug": "chansey",
-					"excludedForStarters": []
+					"spriteSlug": "chansey"
 				},
 				{
 					"dexNumber": 114,
 					"name": "Tangela",
 					"notes": "Trade a Venonat for one with an NPC at Cinnabar Island's Lab. Found on Route 21 and Treasure Beach.",
-					"spriteSlug": "tangela",
-					"excludedForStarters": []
+					"spriteSlug": "tangela"
 				},
 				{
 					"dexNumber": 115,
 					"name": "Kangaskhan",
 					"notes": "Found in Safari Zone Area 1 (East) at a 4% encounter rate and Area 3 (West) at a 1% encounter rate.",
-					"spriteSlug": "kangaskhan",
-					"excludedForStarters": []
+					"spriteSlug": "kangaskhan"
 				},
 				{
 					"dexNumber": 116,
 					"name": "Horsea",
 					"notes": "Found in Seafoam Island with Surfing and are plentiful throughout the world with fishing using Super and Good Rods",
-					"spriteSlug": "horsea",
-					"excludedForStarters": []
+					"spriteSlug": "horsea"
 				},
 				{
 					"dexNumber": 117,
 					"name": "Seadra",
 					"notes": "Found with Super Rod fishing (rare encounter). Evolve from Horsea at level 32.",
-					"spriteSlug": "seadra",
-					"excludedForStarters": []
+					"spriteSlug": "seadra"
 				},
 				{
 					"dexNumber": 118,
 					"name": "Goldeen",
 					"notes": "Found with Super Rod fishing in Fuchsia City and Safari Zone (common encounter). Found with Good Rod fishing (uncommon encounter) in many locations.",
-					"spriteSlug": "goldeen",
-					"excludedForStarters": []
+					"spriteSlug": "goldeen"
 				},
 				{
 					"dexNumber": 119,
 					"name": "Seaking",
 					"notes": "Found with Super Rod fishing in Fuchsia City, Safari Zone, and Berry Forest. Evolve from Goldeen at level 33.",
-					"spriteSlug": "seaking",
-					"excludedForStarters": []
+					"spriteSlug": "seaking"
 				},
 				{
 					"dexNumber": 122,
 					"name": "Mr. Mime",
 					"notes": "Trade an Abra for one with an NPC in a house on Route 2",
-					"spriteSlug": "mr-mime",
-					"excludedForStarters": []
+					"spriteSlug": "mr-mime"
 				},
 				{
 					"dexNumber": 123,
 					"name": "Scyther",
-					"notes": "Found in Safari Zone Area 1 (East) at a 1% encounter rate and Center Area at a 4% encounter rate. Alternatively (and perhaps preferably), purchase it from Celadon Game Center for 5500 coins (or P\u00a5110,000).",
-					"spriteSlug": "scyther",
-					"excludedForStarters": []
+					"notes": "Found in Safari Zone Area 1 (East) at a 1% encounter rate and Center Area at a 4% encounter rate. Alternatively (and perhaps preferably), purchase it from Celadon Game Center for 5500 coins (or P¥110,000).",
+					"spriteSlug": "scyther"
 				},
 				{
 					"dexNumber": 124,
 					"name": "Jynx",
 					"notes": "Trade a Poliwhirl for one in Cerulean City",
-					"spriteSlug": "jynx",
-					"excludedForStarters": []
+					"spriteSlug": "jynx"
 				},
 				{
 					"dexNumber": 125,
 					"name": "Electabuzz",
 					"notes": "Found in the Power Plant",
-					"spriteSlug": "electabuzz",
-					"excludedForStarters": []
+					"spriteSlug": "electabuzz"
 				},
 				{
 					"dexNumber": 128,
 					"name": "Tauros",
 					"notes": "Found in Safari Zone Area 2 (North) at a 1% encounter rate and Area 3 (West) at a 4% encounter rate.",
-					"spriteSlug": "tauros",
-					"excludedForStarters": []
+					"spriteSlug": "tauros"
 				},
 				{
 					"dexNumber": 129,
 					"name": "Magikarp",
 					"notes": "Plentiful! Just fish with the Old Rod!",
-					"spriteSlug": "magikarp",
-					"excludedForStarters": []
+					"spriteSlug": "magikarp"
 				},
 				{
 					"dexNumber": 130,
 					"name": "Gyarados",
 					"notes": "Found in numerous locations with Super Rod fishing. Evolve from Magikarp at level 20.",
-					"spriteSlug": "gyarados",
-					"excludedForStarters": []
+					"spriteSlug": "gyarados"
 				},
 				{
 					"dexNumber": 131,
 					"name": "Lapras",
 					"notes": "Obtain from NPC in Silph Co. after Rival Battle",
-					"spriteSlug": "lapras",
-					"excludedForStarters": []
+					"spriteSlug": "lapras"
 				},
 				{
 					"dexNumber": 132,
 					"name": "Ditto",
-					"notes": "Found on Route 13, 14, 15, Pok\u00e9mon Mansion Basement, and all Cerulean Cave floors",
-					"spriteSlug": "ditto",
-					"excludedForStarters": []
+					"notes": "Found on Route 13, 14, 15, Pokémon Mansion Basement, and all Cerulean Cave floors",
+					"spriteSlug": "ditto"
 				},
 				{
 					"dexNumber": 133,
 					"name": "Eevee",
 					"notes": "Given to you in Celadon Mansion",
-					"spriteSlug": "eevee",
-					"excludedForStarters": []
+					"spriteSlug": "eevee"
 				},
 				{
 					"dexNumber": 134,
 					"name": "Vaporeon",
 					"notes": "Breed spare Eevees and use a Water Stone (found in Seafoam Island or buy in Celadon Store)",
-					"spriteSlug": "vaporeon",
-					"excludedForStarters": []
+					"spriteSlug": "vaporeon"
 				},
 				{
 					"dexNumber": 135,
 					"name": "Jolteon",
 					"notes": "Breed spare Eevees and use a Thunder Stone (found in the Power Plant or buy in Celadon Store)",
-					"spriteSlug": "jolteon",
-					"excludedForStarters": []
+					"spriteSlug": "jolteon"
 				},
 				{
 					"dexNumber": 136,
 					"name": "Flareon",
 					"notes": "Breed spare Eevees and use a Fire Stone (found on Mt. Ember or buy in Celadon Store)",
-					"spriteSlug": "flareon",
-					"excludedForStarters": []
+					"spriteSlug": "flareon"
 				},
 				{
 					"dexNumber": 137,
 					"name": "Porygon",
-					"notes": "Buy with 9999 Celadon Game Center coins. Convert P\u00a5199,000 to 9950 Coins in the Game Center. You will have to actually play the slots to get to maximum of 9999 coins so save prior to playing.",
-					"spriteSlug": "porygon",
-					"excludedForStarters": []
+					"notes": "Buy with 9999 Celadon Game Center coins. Convert P¥199,000 to 9950 Coins in the Game Center. You will have to actually play the slots to get to maximum of 9999 coins so save prior to playing.",
+					"spriteSlug": "porygon"
 				},
 				{
 					"dexNumber": 138,
-					"name": "Omanyte/Kabuto",
-					"notes": "Revive from the Helix/Dome Fossil at Cinnabar Island's Lab",
-					"spriteSlug": "omanyte/kabuto",
-					"excludedForStarters": []
+					"name": "Omanyte",
+					"notes": "Revive Helix Fossil at Cinnabar Island's Lab",
+					"spriteSlug": "omanyte",
+					"exclusiveGroup": "kanto-fossil",
+					"exclusiveOption": "helix"
 				},
 				{
 					"dexNumber": 139,
-					"name": "Omastar/Kabutops",
-					"notes": "Evolve from Omanyte/Kabuto at level 40",
-					"spriteSlug": "omastar/kabutops",
-					"excludedForStarters": []
+					"name": "Kabuto",
+					"notes": "Revive Dome Fossil at Cinnabar Island's Lab",
+					"spriteSlug": "kabuto",
+					"exclusiveGroup": "kanto-fossil",
+					"exclusiveOption": "dome"
+				},
+				{
+					"dexNumber": 140,
+					"name": "Omastar",
+					"notes": "Evolve from Omanyte at level 40",
+					"spriteSlug": "omastar",
+					"exclusiveGroup": "kanto-fossil",
+					"exclusiveOption": "helix"
+				},
+				{
+					"dexNumber": 141,
+					"name": "Kabutops",
+					"notes": "Evolve from Kabuto at level 40",
+					"spriteSlug": "kabutops",
+					"exclusiveGroup": "kanto-fossil",
+					"exclusiveOption": "dome"
 				},
 				{
 					"dexNumber": 142,
 					"name": "Aerodactyl",
 					"notes": "Revive from the Old Amber at Cinnabar Island's Lab",
-					"spriteSlug": "aerodactyl",
-					"excludedForStarters": []
+					"spriteSlug": "aerodactyl"
 				},
 				{
 					"dexNumber": 143,
 					"name": "Snorlax",
 					"notes": "Battle and catch on either Route 12 or 16. These are the only two chances that you have!",
-					"spriteSlug": "snorlax",
-					"excludedForStarters": []
+					"spriteSlug": "snorlax"
 				},
 				{
 					"dexNumber": 144,
 					"name": "Articuno",
 					"notes": "Battle and catch in Seafoam Island. This is the only shot you have!",
-					"spriteSlug": "articuno",
-					"excludedForStarters": []
+					"spriteSlug": "articuno"
 				},
 				{
 					"dexNumber": 145,
 					"name": "Zapdos",
 					"notes": "Battle and catch in the Power Plant. This is the only shot you have!",
-					"spriteSlug": "zapdos",
-					"excludedForStarters": []
+					"spriteSlug": "zapdos"
 				},
 				{
 					"dexNumber": 146,
 					"name": "Moltres",
 					"notes": "Battle and catch on Mt. Ember. This is the only shot you have!",
-					"spriteSlug": "moltres",
-					"excludedForStarters": []
+					"spriteSlug": "moltres"
 				},
 				{
 					"dexNumber": 147,
 					"name": "Dratini",
 					"notes": "All Safari Zone areas with Super Rod fishing (uncommon encounter)",
-					"spriteSlug": "dratini",
-					"excludedForStarters": []
+					"spriteSlug": "dratini"
 				},
 				{
 					"dexNumber": 148,
 					"name": "Dragonair",
 					"notes": "All Safari Zone areas with Super Rod fishing (rare encounter). Evolve from Dratini at level 30 (much better than trying to catch one in Safari Zone...)",
-					"spriteSlug": "dragonair",
-					"excludedForStarters": []
+					"spriteSlug": "dragonair"
 				},
 				{
 					"dexNumber": 149,
 					"name": "Dragonite",
 					"notes": "Evolve from Dragonair at level 55",
-					"spriteSlug": "dragonite",
-					"excludedForStarters": []
+					"spriteSlug": "dragonite"
 				},
 				{
 					"dexNumber": 150,
 					"name": "Mewtwo",
 					"notes": "Cerulean Cave Basement. Recommend NOT using the Master Ball!! Bring a party that can put on a status effect (between Mewtwo's Safeguards) and a TON of Ultra Balls. You can use Timer Balls from Two Island's shop when the battle has dragged on for a long while.",
-					"spriteSlug": "mewtwo",
-					"excludedForStarters": []
+					"spriteSlug": "mewtwo"
 				},
 				{
 					"dexNumber": 161,
 					"name": "Sentret",
 					"notes": "Found in Canyon Entrance, Five Island Meadow, or Water Path",
-					"spriteSlug": "sentret",
-					"excludedForStarters": []
+					"spriteSlug": "sentret"
 				},
 				{
 					"dexNumber": 162,
 					"name": "Furret",
 					"notes": "Evolve from Sentret at level 15",
-					"spriteSlug": "furret",
-					"excludedForStarters": []
+					"spriteSlug": "furret"
 				},
 				{
 					"dexNumber": 165,
 					"name": "Ledyba",
 					"notes": "Found in Pattern Bush",
-					"spriteSlug": "ledyba",
-					"excludedForStarters": []
+					"spriteSlug": "ledyba"
 				},
 				{
 					"dexNumber": 166,
 					"name": "Ledian",
 					"notes": "Evolve from Ledyba at level 18",
-					"spriteSlug": "ledian",
-					"excludedForStarters": []
+					"spriteSlug": "ledian"
 				},
 				{
 					"dexNumber": 167,
 					"name": "Spinarak",
 					"notes": "Found in Pattern Bush",
-					"spriteSlug": "spinarak",
-					"excludedForStarters": []
+					"spriteSlug": "spinarak"
 				},
 				{
 					"dexNumber": 168,
 					"name": "Ariados",
 					"notes": "Evolve from Spinarak at level 22",
-					"spriteSlug": "ariados",
-					"excludedForStarters": []
+					"spriteSlug": "ariados"
 				},
 				{
 					"dexNumber": 169,
 					"name": "Crobat",
 					"notes": "Evolve from Golbat with high Friendship (Soothe Bell will help expedite raising Friendship)",
-					"spriteSlug": "crobat",
-					"excludedForStarters": []
+					"spriteSlug": "crobat"
 				},
 				{
 					"dexNumber": 172,
 					"name": "Pichu",
 					"notes": "Breed a Pikachu/Raichu at the Four Island Day Care",
-					"spriteSlug": "pichu",
-					"excludedForStarters": []
+					"spriteSlug": "pichu"
 				},
 				{
 					"dexNumber": 173,
 					"name": "Cleffa",
 					"notes": "Breed a Clefairy/Clefable at the Four Island Day Care",
-					"spriteSlug": "cleffa",
-					"excludedForStarters": []
+					"spriteSlug": "cleffa"
 				},
 				{
 					"dexNumber": 174,
 					"name": "Igglybuff",
 					"notes": "Breed a Jigglypuff/Wigglytuff at the Four Island Day Care",
-					"spriteSlug": "igglybuff",
-					"excludedForStarters": []
+					"spriteSlug": "igglybuff"
 				},
 				{
 					"dexNumber": 175,
 					"name": "Togepi",
 					"notes": "Obtain an egg from the Gentleman at Water Labyrinth",
-					"spriteSlug": "togepi",
-					"excludedForStarters": []
+					"spriteSlug": "togepi"
 				},
 				{
 					"dexNumber": 176,
 					"name": "Togetic",
 					"notes": "Evolve from Togepi with high Friendship (Soothe Bell will help expedite raising Friendship)",
-					"spriteSlug": "togetic",
-					"excludedForStarters": []
+					"spriteSlug": "togetic"
 				},
 				{
 					"dexNumber": 177,
 					"name": "Natu",
 					"notes": "Found in Ruin Valley",
-					"spriteSlug": "natu",
-					"excludedForStarters": []
+					"spriteSlug": "natu"
 				},
 				{
 					"dexNumber": 178,
 					"name": "Xatu",
 					"notes": "Evolve from Natu at level 25",
-					"spriteSlug": "xatu",
-					"excludedForStarters": []
+					"spriteSlug": "xatu"
 				},
 				{
 					"dexNumber": 182,
 					"name": "Bellossom",
 					"notes": "Evolve from Gloom with a Sun Stone (found in Ruin Valley)",
-					"spriteSlug": "bellossom",
-					"excludedForStarters": []
+					"spriteSlug": "bellossom"
 				},
 				{
 					"dexNumber": 187,
 					"name": "Hoppip",
 					"notes": "Found while Surfing around Sevii Island areas or in grass in Five Isle Meadow and Memorial Pillar",
-					"spriteSlug": "hoppip",
-					"excludedForStarters": []
+					"spriteSlug": "hoppip"
 				},
 				{
 					"dexNumber": 188,
 					"name": "Skiploom",
 					"notes": "Evolve from Hoppip at level 18",
-					"spriteSlug": "skiploom",
-					"excludedForStarters": []
+					"spriteSlug": "skiploom"
 				},
 				{
 					"dexNumber": 189,
 					"name": "Jumpluff",
 					"notes": "Evolve from Skiploom at level 27",
-					"spriteSlug": "jumpluff",
-					"excludedForStarters": []
+					"spriteSlug": "jumpluff"
 				},
 				{
 					"dexNumber": 193,
 					"name": "Yanma",
 					"notes": "Found in Ruin Valley",
-					"spriteSlug": "yanma",
-					"excludedForStarters": []
+					"spriteSlug": "yanma"
 				},
 				{
 					"dexNumber": 194,
 					"name": "Wooper",
 					"notes": "Found while Surfing around Four Island and Icefall Cave Entrance or in grass and surf in Ruin Valley",
-					"spriteSlug": "wooper",
-					"excludedForStarters": []
+					"spriteSlug": "wooper"
 				},
 				{
 					"dexNumber": 195,
 					"name": "Quagsire",
 					"notes": "Evolve from Wooper at level 20",
-					"spriteSlug": "quagsire",
-					"excludedForStarters": []
+					"spriteSlug": "quagsire"
 				},
 				{
 					"dexNumber": 198,
 					"name": "Murkrow",
 					"notes": "Found in Lost Cave (higher encounter rate in item rooms)",
-					"spriteSlug": "murkrow",
-					"excludedForStarters": []
+					"spriteSlug": "murkrow"
 				},
 				{
 					"dexNumber": 201,
 					"name": "Unown",
 					"notes": "Found in the various chambers of Tanoby Ruins once the puzzle is solved in the Sevault Canyon cave",
-					"spriteSlug": "unown",
-					"excludedForStarters": []
+					"spriteSlug": "unown"
 				},
 				{
 					"dexNumber": 202,
 					"name": "Wobbuffet",
 					"notes": "Found in Ruin Valley and all Cerulean Cave floors",
-					"spriteSlug": "wobbuffet",
-					"excludedForStarters": []
+					"spriteSlug": "wobbuffet"
 				},
 				{
 					"dexNumber": 206,
 					"name": "Dunsparce",
 					"notes": "Found in Three Isle Port",
-					"spriteSlug": "dunsparce",
-					"excludedForStarters": []
+					"spriteSlug": "dunsparce"
 				},
 				{
 					"dexNumber": 211,
 					"name": "Qwilfish",
 					"notes": "Fish with the Super Rod in Sevii Island areas",
-					"spriteSlug": "qwilfish",
-					"excludedForStarters": []
+					"spriteSlug": "qwilfish"
 				},
 				{
 					"dexNumber": 214,
 					"name": "Heracross",
 					"notes": "Found in Pattern Bush",
-					"spriteSlug": "heracross",
-					"excludedForStarters": []
+					"spriteSlug": "heracross"
 				},
 				{
 					"dexNumber": 218,
 					"name": "Slugma",
 					"notes": "Found in Mt. Ember cave basements or as a common random Rock Smash encounter in Mt. Ember basement 3",
-					"spriteSlug": "slugma",
-					"excludedForStarters": []
+					"spriteSlug": "slugma"
 				},
 				{
 					"dexNumber": 219,
 					"name": "Magcargo",
 					"notes": "Found in Mt. Ember basement 3 as a rare random Rock Smash encounter. Evolve from Slugma at level 38.",
-					"spriteSlug": "magcargo",
-					"excludedForStarters": []
+					"spriteSlug": "magcargo"
 				},
 				{
 					"dexNumber": 220,
 					"name": "Swinub",
 					"notes": "Found in Icefall Cave",
-					"spriteSlug": "swinub",
-					"excludedForStarters": []
+					"spriteSlug": "swinub"
 				},
 				{
 					"dexNumber": 221,
 					"name": "Piloswine",
 					"notes": "Evolve from Swinub at level 33",
-					"spriteSlug": "piloswine",
-					"excludedForStarters": []
+					"spriteSlug": "piloswine"
 				},
 				{
 					"dexNumber": 225,
 					"name": "Delibird",
 					"notes": "Found in Icefall Cave",
-					"spriteSlug": "delibird",
-					"excludedForStarters": []
+					"spriteSlug": "delibird"
 				},
 				{
 					"dexNumber": 227,
 					"name": "Skarmory",
 					"notes": "Found in Sevault Canyon",
-					"spriteSlug": "skarmory",
-					"excludedForStarters": []
+					"spriteSlug": "skarmory"
 				},
 				{
 					"dexNumber": 231,
 					"name": "Phanpy",
 					"notes": "Found in Sevault Canyon and Canyon Entrance",
-					"spriteSlug": "phanpy",
-					"excludedForStarters": []
+					"spriteSlug": "phanpy"
 				},
 				{
 					"dexNumber": 232,
 					"name": "Donphan",
 					"notes": "Evolve from Phanpy at level 25",
-					"spriteSlug": "donphan",
-					"excludedForStarters": []
+					"spriteSlug": "donphan"
 				},
 				{
 					"dexNumber": 236,
 					"name": "Tyrogue",
-					"notes": "Breed from the Fighting Dojo Pok\u00e9mon",
-					"spriteSlug": "tyrogue",
-					"excludedForStarters": []
+					"notes": "Breed from the Fighting Dojo Pokémon",
+					"spriteSlug": "tyrogue"
 				},
 				{
 					"dexNumber": 237,
 					"name": "Hitmontop",
 					"notes": "Evolve from Tyrogue at level 20",
-					"spriteSlug": "hitmontop",
-					"excludedForStarters": []
+					"spriteSlug": "hitmontop"
 				},
 				{
 					"dexNumber": 238,
 					"name": "Smoochum",
 					"notes": "Breed a Jynx at the Four Island Day Care",
-					"spriteSlug": "smoochum",
-					"excludedForStarters": []
+					"spriteSlug": "smoochum"
 				},
 				{
 					"dexNumber": 239,
 					"name": "Elekid",
 					"notes": "Breed a Electabuzz at the Four Island Day Care",
-					"spriteSlug": "elekid",
-					"excludedForStarters": []
+					"spriteSlug": "elekid"
 				},
 				{
 					"dexNumber": 242,
 					"name": "Blissey",
 					"notes": "Evolve from Chansey with high Friendship (Soothe Bell will help expedite raising friendship)",
-					"spriteSlug": "blissey",
-					"excludedForStarters": []
+					"spriteSlug": "blissey"
 				},
 				{
 					"dexNumber": 243,
 					"name": "Raikou",
-					"notes": "Wild encounter in Kanto after first Elite Four victory and receiving National Dex. The Pok\u00e9mon faced depends on the chosen starter.",
+					"notes": "Wild encounter in Kanto after first Elite Four victory and receiving National Dex. The Pokémon faced depends on the chosen starter.",
 					"spriteSlug": "raikou",
-					"excludedForStarters": ["bulbasaur", "charmander"]
+					"exclusiveGroup": "kanto-starter",
+					"exclusiveOption": "squirtle"
 				},
 				{
 					"dexNumber": 244,
 					"name": "Entei",
-					"notes": "Wild encounter in Kanto after first Elite Four victory and receiving National Dex. The Pok\u00e9mon faced depends on the chosen starter.",
+					"notes": "Wild encounter in Kanto after first Elite Four victory and receiving National Dex. The Pokémon faced depends on the chosen starter.",
 					"spriteSlug": "entei",
-					"excludedForStarters": ["charmander", "squirtle"]
+					"exclusiveGroup": "kanto-starter",
+					"exclusiveOption": "bulbasaur"
 				},
 				{
 					"dexNumber": 245,
 					"name": "Suicune",
-					"notes": "Wild encounter in Kanto after first Elite Four victory and receiving National Dex. The Pok\u00e9mon faced depends on the chosen starter.",
+					"notes": "Wild encounter in Kanto after first Elite Four victory and receiving National Dex. The Pokémon faced depends on the chosen starter.",
 					"spriteSlug": "suicune",
-					"excludedForStarters": ["bulbasaur", "squirtle"]
+					"exclusiveGroup": "kanto-starter",
+					"exclusiveOption": "charmander"
 				},
 				{
 					"dexNumber": 246,
 					"name": "Larvitar",
 					"notes": "Found in Sevault Canyon",
-					"spriteSlug": "larvitar",
-					"excludedForStarters": []
+					"spriteSlug": "larvitar"
 				},
 				{
 					"dexNumber": 247,
 					"name": "Pupitar",
 					"notes": "Evolve from Larvitar at level 30",
-					"spriteSlug": "pupitar",
-					"excludedForStarters": []
+					"spriteSlug": "pupitar"
 				},
 				{
 					"dexNumber": 248,
 					"name": "Tyranitar",
 					"notes": "Evolve from Pupitar at level 55",
-					"spriteSlug": "tyranitar",
-					"excludedForStarters": []
+					"spriteSlug": "tyranitar"
 				},
 				{
 					"dexNumber": 360,
 					"name": "Wynaut",
 					"notes": "Breed Wobbuffet that holds Lax Incense at the Four Island Day Care",
-					"spriteSlug": "wynaut",
-					"excludedForStarters": []
+					"spriteSlug": "wynaut"
 				}
 			]
 		}

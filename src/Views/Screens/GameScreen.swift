@@ -25,18 +25,46 @@ struct GameScreen: View {
 		games.first { $0.id == currentGameID }!
 	}
 
+	var totalCatchablePokemon: Int {
+		var count = 0
+		var selectedOptions: [String: String] = [:]
+
+		for poke in pokemon {
+			guard let group = poke.exclusiveGroup, let option = poke.exclusiveOption else {
+				count += 1
+				continue
+			}
+
+			if selectedOptions[group] == nil { selectedOptions[group] = option }
+			if selectedOptions[group] == option { count += 1 }
+		}
+
+		return count
+	}
+
 	var subtitle: String {
 		if isShowingPercentage {
-			let percentage = Double(pokemon.filter(\.isRegistered).count) / Double(pokemon.count) * 100
+			let percentage = Double(pokemon.filter(\.isRegistered).count) / Double(totalCatchablePokemon) * 100
 			return String(format: "%.0f%%", percentage)
 		}
 
-		return "\(pokemon.filter(\.isRegistered).count) / \(pokemon.count)"
+		return "\(pokemon.filter(\.isRegistered).count) / \(totalCatchablePokemon)"
 	}
 
 	var filteredPokemon: [Pokemon] {
 		pokemon
 			.filter { !showingOnlyMissing || !$0.isRegistered }
+			.filter { poke in
+				guard let group = poke.exclusiveGroup, let option = poke.exclusiveOption else {
+					return true
+				}
+
+				let hasConflictingChoice = pokemon.contains { other in
+					other.exclusiveGroup == group && other.exclusiveOption != option && other.isRegistered
+				}
+
+				return !hasConflictingChoice
+			}
 			.filter {
 				query == "" || $0.name.localizedCaseInsensitiveContains(query) || $0.notes.localizedCaseInsensitiveContains(query)
 			}
