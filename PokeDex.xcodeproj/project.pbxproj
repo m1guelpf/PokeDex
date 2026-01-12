@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C05E5EAB2ECFABC100E37F51 /* SQLiteData in Frameworks */ = {isa = PBXBuildFile; productRef = C05E5EAA2ECFABC100E37F51 /* SQLiteData */; };
 		C0AD6D202EEE0312009D2482 /* SwiftCSV in Frameworks */ = {isa = PBXBuildFile; productRef = C0AD6D1F2EEE0312009D2482 /* SwiftCSV */; };
+		C0DB2FD02F14CBC50034F4CD /* ObfuscateMacro in Frameworks */ = {isa = PBXBuildFile; productRef = C0DB2FCF2F14CBC50034F4CD /* ObfuscateMacro */; };
 		C0F3EF5F2ECFB6A5005CA536 /* TinyStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C0F3EF5E2ECFB6A5005CA536 /* TinyStorage */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0DB2FD02F14CBC50034F4CD /* ObfuscateMacro in Frameworks */,
 				C05E5EAB2ECFABC100E37F51 /* SQLiteData in Frameworks */,
 				C0F3EF5F2ECFB6A5005CA536 /* TinyStorage in Frameworks */,
 				C0AD6D202EEE0312009D2482 /* SwiftCSV in Frameworks */,
@@ -98,6 +100,7 @@
 				C05E5EAA2ECFABC100E37F51 /* SQLiteData */,
 				C0F3EF5E2ECFB6A5005CA536 /* TinyStorage */,
 				C0AD6D1F2EEE0312009D2482 /* SwiftCSV */,
+				C0DB2FCF2F14CBC50034F4CD /* ObfuscateMacro */,
 			);
 			productName = Cheevos;
 			productReference = C0F9FC9B2ECFA845009DB8F2 /* PokeDex.app */;
@@ -131,6 +134,7 @@
 				C05E5EA92ECFABC100E37F51 /* XCRemoteSwiftPackageReference "sqlite-data" */,
 				C0B7F0482ECFAEA00016A08A /* XCRemoteSwiftPackageReference "TinyStorage" */,
 				C02565E02EEE02EE00F91FC0 /* XCRemoteSwiftPackageReference "SwiftCSV" */,
+				C0DB2FCE2F14CBC50034F4CD /* XCRemoteSwiftPackageReference "ObfuscateMacro" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C0F9FC9C2ECFA845009DB8F2 /* Products */;
@@ -424,6 +428,14 @@
 				minimumVersion = 2.0.1;
 			};
 		};
+		C0DB2FCE2F14CBC50034F4CD /* XCRemoteSwiftPackageReference "ObfuscateMacro" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/p-x9/ObfuscateMacro.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.13.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -436,6 +448,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C02565E02EEE02EE00F91FC0 /* XCRemoteSwiftPackageReference "SwiftCSV" */;
 			productName = SwiftCSV;
+		};
+		C0DB2FCF2F14CBC50034F4CD /* ObfuscateMacro */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0DB2FCE2F14CBC50034F4CD /* XCRemoteSwiftPackageReference "ObfuscateMacro" */;
+			productName = ObfuscateMacro;
 		};
 		C0F3EF5E2ECFB6A5005CA536 /* TinyStorage */ = {
 			isa = XCSwiftPackageProductDependency;
