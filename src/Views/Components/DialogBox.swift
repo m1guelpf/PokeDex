@@ -6,6 +6,10 @@ struct DialogBox: View {
 	@State private var dialogHeight: CGFloat = 0
 	@State private var finishedShowingText = false
 
+	var screenSize: CGSize {
+		UIApplication.shared.mainWindow?.screen.bounds.size ?? .zero
+	}
+
 	var shape: some Shape {
 		UnevenRoundedRectangle(
 			topLeadingRadius: 20,
@@ -26,18 +30,21 @@ struct DialogBox: View {
 				if let text {
 					Text(AttributedString(text))
 						.lineSpacing(7)
+						.lineLimit(3)
+						.minimumScaleFactor(0.9)
 						.foregroundStyle(.black)
 						.transition(.dialogText {
 							finishedShowingText = true
 						})
-						.font(.custom("PKMN RBYGSC", size: 15))
+						.font(.custom("PKMN RBYGSC", size: screenSize.width * 0.04))
 						.multilineTextAlignment(.leading)
 						.id(text)
+						.frame(maxWidth: .infinity, alignment: .leading)
 				}
 
-				Spacer(minLength: 110)
+				Spacer(minLength: screenSize.width * 0.31)
 			}
-			.padding(.horizontal)
+			.padding(.leading)
 			.padding(.vertical)
 			.padding(.bottom, 20)
 			.frame(minHeight: 100, alignment: .top)
@@ -49,8 +56,8 @@ struct DialogBox: View {
 				Image(.trainer)
 					.resizable()
 					.scaledToFit()
-					.frame(width: 190)
-					.offset(x: 20)
+					.frame(width: screenSize.width * 0.5)
+					.offset(x: 34)
 			}
 		}
 		.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
