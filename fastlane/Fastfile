@@ -24,8 +24,7 @@ lane :deploy do
 	)
 
 	build_app(scheme: "PokeDex", xcargs: "-skipMacroValidation")
-	# upload_to_testflight(distribute_external: true, changelog: "", groups: ["External"])
-	upload_to_testflight(skip_submission: true)
+	upload_to_testflight(distribute_external: true, changelog: "", groups: ["External"])
 end
 
 desc "Generate profiles and certificates"
