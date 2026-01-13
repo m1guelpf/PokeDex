@@ -100,9 +100,7 @@ struct GameScreen: View {
 		.sheet(isPresented: $isPresentingSettings) {
 			NavigationStack { SettingsPage() }
 		}
-		.onShake {
-			isPresentingSettings = true
-		}
+		.onShake { isPresentingSettings = true }
 		.toolbarTitleMenu {
 			Picker("Select Game", selection: $currentGameID) {
 				ForEach(games) { game in

@@ -5,6 +5,7 @@ import TinyStorage
 struct RootContainer: View {
 	@FetchAll(Game.all) private var games: [Game] = []
 	@TinyStorageItem(.activeGameId) private var currentGameID: UUID? = nil
+	@TinyStorageItem(.hasSeenOnboarding) private var hasSeenOnboarding = false
 
 	var currentGame: Game? {
 		guard let currentGameID else { return nil }
@@ -12,7 +13,7 @@ struct RootContainer: View {
 	}
 
 	var body: some View {
-		Group {
+		NavigationStack {
 			if games.isEmpty {
 				SplashScreen()
 			} else {
@@ -22,6 +23,15 @@ struct RootContainer: View {
 					ProgressView()
 				}
 			}
+		}
+		.withDialog([
+			"Alright!\nI've loaded all the data we have about the region",
+			"This includes a list of all known Pokemon, and where to find them.",
+			"You can swipe right on any of the entries to mark it as caught,",
+			"and filter the list to see which ones you're still missing.",
+			"Good luck on your adventure!"
+		], show: currentGame != nil && !hasSeenOnboarding) {
+			hasSeenOnboarding = true
 		}
 		.onAppear { repareCurrentGameIfNeeded() }
 		.onChange(of: games) { repareCurrentGameIfNeeded() }
@@ -44,7 +54,5 @@ struct RootContainer: View {
 		}
 	}
 
-	NavigationStack {
-		RootContainer()
-	}
+	RootContainer()
 }

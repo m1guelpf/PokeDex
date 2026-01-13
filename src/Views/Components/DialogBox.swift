@@ -22,7 +22,7 @@ struct DialogBox: View {
 	var body: some View {
 		ZStack(alignment: .bottom) {
 			shape
-				.glassEffect(.clear, in: shape)
+				.glassEffect(.regular, in: shape)
 				.frame(height: dialogHeight)
 				.ignoresSafeArea()
 
@@ -32,7 +32,7 @@ struct DialogBox: View {
 						.lineSpacing(7)
 						.lineLimit(3)
 						.minimumScaleFactor(0.9)
-						.foregroundStyle(.black)
+						.foregroundStyle(.primary)
 						.transition(.dialogText {
 							finishedShowingText = true
 						})
