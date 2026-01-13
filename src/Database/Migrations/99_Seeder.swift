@@ -2,6 +2,8 @@ import Foundation
 import SQLiteData
 
 #if DEBUG
+fileprivate let manifest = try! GameManifest.load()
+
 final class SeedDatabase: Seeder {
 	static func seed() -> Records {
 		apply([
@@ -15,7 +17,16 @@ final class SeedDatabase: Seeder {
 	}
 
 	static func seedPokemon() -> [Pokemon] {
-		[Pokemon.sampleData]
+		manifest.games.flatMap(\.pokemon).prefix(20).map { pokemon in
+			Pokemon(
+				id: UUID(),
+				gameId: Game.sampleData.id,
+				name: pokemon.name,
+				spriteName: pokemon.spriteSlug,
+				notes: pokemon.notes,
+				dexNumber: pokemon.dexNumber
+			)
+		}
 	}
 }
 #endif

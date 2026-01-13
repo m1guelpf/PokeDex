@@ -4,6 +4,7 @@ import TinyStorage
 
 struct GameScreen: View {
 	var currentGame: Game
+	@Binding var showingNewGameDialog: Bool
 
 	@State private var query: String = ""
 	@State private var isAddingGame = false
@@ -17,8 +18,9 @@ struct GameScreen: View {
 	@FetchAll(Game.all, animation: .default) private var games: [Game]
 	@FetchAll(Pokemon.none, animation: .default) private var pokemon: [Pokemon]
 
-	init(currentGame: Game) {
+	init(currentGame: Game, showingNewGameDialog: Binding<Bool>) {
 		self.currentGame = currentGame
+		_showingNewGameDialog = showingNewGameDialog
 		_pokemon = FetchAll(Pokemon.where { $0.gameId == currentGame.id }.order(by: \.dexNumber), animation: .default)
 	}
 
@@ -101,6 +103,10 @@ struct GameScreen: View {
 			NavigationStack { SettingsPage() }
 		}
 		.onShake { isPresentingSettings = true }
+		.onChange(of: showingNewGameDialog) { _, showingDialog in
+			guard !showingDialog else { return }
+			isAddingGame = true
+		}
 		.toolbarTitleMenu {
 			Picker("Select Game", selection: $currentGameID) {
 				ForEach(games) { game in
@@ -110,7 +116,7 @@ struct GameScreen: View {
 			}
 
 			Button("Add Game", systemImage: "plus") {
-				isAddingGame = true
+				showingNewGameDialog = true
 			}
 		}
 		.toolbar {
@@ -148,6 +154,6 @@ struct GameScreen: View {
 	}
 
 	NavigationStack {
-		GameScreen(currentGame: .sampleData)
+		GameScreen(currentGame: .sampleData, showingNewGameDialog: .constant(false))
 	}
 }
